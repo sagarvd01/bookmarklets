@@ -2,11 +2,11 @@ function ytscroller() {
 	var masthead = document.getElementById("masthead-container").getBoundingClientRect();
 	var theater = document.getElementById("player-container").getBoundingClientRect();
 	var player = document.getElementById("movie_player");
-	var video = document.getElementsByTagName("video")[0];
-	var controls = document.getElementsByClassName("ytp-chrome-bottom")[0];
+	var video = document.querySelector("video");
+	var controls = document.querySelector(".ytp-chrome-bottom");
 	/* reset style to accurately compute theater height */
 	player.removeAttribute("style");
-	if (theater.bottom < masthead.height) {
+	if (theater.bottom <= masthead.height) {
 							var sidebar = document.getElementById("related").getBoundingClientRect();
 							var player_box = player.getBoundingClientRect();
 							var video_box = video.getBoundingClientRect();
