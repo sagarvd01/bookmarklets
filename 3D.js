@@ -50,9 +50,9 @@ var d3 = {
 * {
 	transform: translateZ(${gap}px) rotateX(${sag}rad);
 	transform-style: preserve-3d;
-	transition: transform 1s;
-	outline: 1px solid rgba(0, 0, 0, 0.0625);
-	${d3.flo.checked ? "overflow: visible !important;" : ""}
+	transition: transform 1000ms;
+	outline: 1px solid rgba(0, 0, 0, 0.05);
+	${d3.flo.checked ? "overflow: visible !important;" : "ovreflow: auto;"}
 }
 *:hover {
 	transform: translateZ(${gap * 2}px) rotateX(${sag * 2}rad);
@@ -151,7 +151,7 @@ html, html:hover, #d3-menu, #d3-menu > *, #d3-menu > *:hover {
 	right: 0;
 	height: 32px;
 	width: 32px;
-	background: transparent;
+	background: rgba(0,0,0,0);
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -168,7 +168,7 @@ html, html:hover, #d3-menu, #d3-menu > *, #d3-menu > *:hover {
 		window.addEventListener("mousemove", d3.mouseMove);
 		window.addEventListener("scroll", d3.updateOrigin);
 		window.addEventListener("resize", d3.updateOrigin);
-		window.scrollBy(0, 1);
+		window.scrollBy(0, 0);
 	}
 };
 d3.init();
